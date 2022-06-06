@@ -23,4 +23,4 @@ anyhow = "1.0.43"    # for easy error handling
 itertools = "0.10.3" # useful iterator extensions
 nom = "7.0.0"        # for parsing
 peg = "0.7.0"        # for parsing
-regex = "1.5.4"      # for parsing
+regex = "1.5.5"      # for parsing
