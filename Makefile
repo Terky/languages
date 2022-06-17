@@ -128,6 +128,10 @@ test_redis_rust: download_starter_testers
 	bundle exec ruby template_compiler/compile.rb redis rust
 	bundle exec ruby tests/test_course.rb redis rust
 
+test_redis_swift: download_starter_testers
+	bundle exec ruby template_compiler/compile.rb redis swift
+	bundle exec ruby tests/test_course.rb redis swift
+
 test_sqlite_python: download_starter_testers
 	bundle exec ruby template_compiler/compile.rb sqlite python
 	bundle exec ruby tests/test_course.rb sqlite python
