@@ -22,6 +22,7 @@ php = Language.new(slug: "php", name: "PHP", repo_suffix: "php")
 python = Language.new(slug: "python", name: "Python", repo_suffix: "python")
 ruby = Language.new(slug: "ruby", name: "Ruby", repo_suffix: "ruby")
 rust = Language.new(slug: "rust", name: "Rust", repo_suffix: "rust")
+swift = Language.new(slug: "swift", name: "Swift", repo_suffix: "swift")
 
 DEFINITIONS = [
   # ------------------- REDIS ------------------------------
@@ -222,6 +223,24 @@ DEFINITIONS = [
     template_attrs: {
       "required_executable": "node (16)",
       "user_editable_file": "app/main.js"
+    }
+  ),
+  Repo.new(
+    course: redis,
+    language: swift,
+    file_mappings: [
+      # FM.new("README.md", "redis/swift/README.md"),
+      FM.new("codecrafters.yml", "codecrafters.yml"),
+      FM.new("Sources/swift-redis-challenge/Main.swift", "redis/swift/Sources/swift-redis-challenge/Main.swift"),
+      # FM.new("Sources/swift-redis-challenge/Server.swift", "redis/swift/Sources/swift-redis-challenge/Server.swift"),
+      FM.new("Package.swift", "redis/swift/Package.swift"),
+      FM.new("Package.resolved", "redis/swift/Package.resolved"),
+      FM.new(".gitignore", "redis/swift/.gitignore"),
+      FM.new("spawn_redis_server.sh", "redis/swift/spawn_redis_server.sh", is_executable=true),
+    ],
+    template_attrs: {
+      "required_executable": "swift",
+      "user_editable_file": "Source/swift-redis-challange/Main.swift"
     }
   ),
 
