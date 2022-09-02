@@ -517,6 +517,30 @@ DEFINITIONS = [
       "user_editable_file": "src/Program.cs"
     }
   ),
+  Repo.new(
+    course: sqlite,
+    language: swift,
+    file_mappings: [
+      FM.new("README.md", "sqlite/README.md"),
+      FM.new("codecrafters.yml", "codecrafters.yml"),
+      FM.new("Sources/swift-sqlite-challenge/Main.swift", "sqlite/swift/Sources/swift-sqlite-challenge/Main.swift"),
+      FM.new("Sources/swift-sqlite-challenge/ArraySlice+.swift", "sqlite/swift/Sources/swift-sqlite-challenge/ArraySlice+.swift"),
+      FM.new("Sources/swift-sqlite-challenge/PageHeader.swift", "sqlite/swift/Sources/swift-sqlite-challenge/PageHeader.swift"),
+      FM.new("Sources/swift-sqlite-challenge/Record.swift", "sqlite/swift/Sources/swift-sqlite-challenge/Record.swift"),
+      FM.new("Sources/swift-sqlite-challenge/Schema.swift", "sqlite/swift/Sources/swift-sqlite-challenge/Schema.swift"),
+      FM.new("Sources/swift-sqlite-challenge/UnsignedInteger+.swift", "sqlite/swift/Sources/swift-sqlite-challenge/UnsignedInteger+.swift"),
+      FM.new("Sources/swift-sqlite-challenge/Varint.swift", "sqlite/swift/Sources/swift-sqlite-challenge/Varint.swift"),
+      FM.new("Package.swift", "sqlite/swift/Package.swift"),
+      FM.new(".gitignore", "sqlite/swift/.gitignore"),
+      FM.new("your_sqlite3.sh", "sqlite/swift/your_sqlite3.sh", is_executable=true),
+      FM.new("sample.db", "sqlite/sample.db"),
+      FM.new("download_sample_databases.sh", "sqlite/download_sample_databases.sh", is_executable=true),
+    ],
+    template_attrs: {
+      "required_executable": "swift",
+      "user_editable_file": "Source/swift-sqlite-challange/Main.swift"
+    }
+  ),
 
   # ------------------- REACT ------------------------------
   Repo.new(
